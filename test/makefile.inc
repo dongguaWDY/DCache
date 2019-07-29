@@ -8,8 +8,8 @@ MYSQL_INC       += -I/usr/local/mysql/include/mysql -I/usr/local/mysql/include -
 MYSQL_LIB_DIR   += -L/usr/local/mysql/lib/mysql -L/usr/local/mysql/lib -L/usr/lib/mysql -L/usr/lib64/mysql/
 LIB_DIR         += ${MYSQL_LIB_DIR}
 
-GTEST_INC       += -I/data/guochengwu/gtest-src/googletest-release-1.8.1/googletest/include -I/data/guochengwu/gtest-src/googletest-release-1.8.1/googlemock/include
-GTEST_LIB_DIR   += -L/data/guochengwu/gtest-src/googletest-release-1.8.1
+GTEST_INC       += -I../googletest/googletest/include -I../googletest/googlemock/include
+GTEST_LIB_DIR   += -L../goolletest/lib/
 LIB_DIR         += ${GTEST_LIB_DIR}
 
 INCLUDE         += -I${TARS_PATH}/include ${MYSQL_INC} ${GTEST_INC} -I../../src/thirdParty/rapidjson/include

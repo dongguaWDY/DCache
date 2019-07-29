@@ -2,6 +2,11 @@ DCache测试说明
 ====
 DCache单元测试采用[googletest](https://github.com/abseil/googletest)，其具体使用方法请参考[官方文档](https://github.com/abseil/googletest/blob/master/googletest/docs/primer.md)。另外还引入了[googlemock](https://github.com/abseil/googletest/tree/master/googlemock)来辅助单元测试，可自行选用。
 
+## 编译安装gtest
+测试代码依赖gtest，所以在编译测试代码前，要先安装gtest，安装方法如下：
+> ./install_gtest.sh
+如果安装机器无法连接外网，请手动安装。
+
 ## 添加测试用例
 测试代码位于此test目录下，目录结构和源码结构保持统一。原则上保证测试代码文件和源代码文件一一对应，即每个cpp文件都有对应的测试文件且统一命名，如源代码文件为：/src/Router/Transfer.cpp，对应的测试代码为/test/Router/TransferTest.cpp。
 各自模块应包含此目录下的makefile.inc文件，增加测试代码后，在其模块目录执行make命令进行编译，会生成对应的测试可执行程序，如TransferTest，直接运行它就可以进行测试。
